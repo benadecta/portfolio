@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Benadecta Jacob, IT professional with expertise in Business Analysis, Scrum Mastery, and ERP solutions.">
     <title>Benadecta Jacob - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Ensure Font Awesome is included -->
 </head>
 <body>
-    <!-- Background Shapes -->
-    <div class="bg-shapes">
+    <!-- Background Waves -->
+    <div class="bg-waves">
         <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <!-- Navbar -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">Benadecta Jacob</div>
-        <div class="menu-toggle">
+        <button class="menu-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#hire-me">Hire Me</a></li>
+            <li><a href="#about" aria-label="About section">About</a></li>
+            <li><a href="#skills" aria-label="Skills section">Skills</a></li>
+            <li><a href="#experience" aria-label="Experience section">Experience</a></li>
+            <li><a href="#projects" aria-label="Projects section">Projects</a></li>
+            <li><a href="#education" aria-label="Education section">Education</a></li>
+            <li><a href="#certifications" aria-label="Certifications section">Certifications</a></li>
+            <li><a href="#hire-me" aria-label="Hire me section">Hire Me</a></li>
         </ul>
     </nav>
 
@@ -40,13 +41,13 @@
             <h1>Hi, I’m <span class="highlight">Benadecta Jacob</span></h1>
             <h2 id="typewriter"></h2>
             <div class="hero-buttons">
-                <a href="assets/Benadecta_Jacob_CV.pdf" class="btn">📄 Download CV</a>
-                <a href="#hire-me" class="btn secondary">🚀 Hire Me</a>
+                <a href="assets/Benadecta_Jacob_CV.pdf" class="btn" aria-label="Download CV">📄 Download CV</a>
+                <a href="#hire-me" class="btn secondary" aria-label="Hire me">🚀 Hire Me</a>
             </div>
             <div class="social-icons">
-                <a href="tel:+9110669762"><i class="fas fa-phone"></i></a>
-                <a href="mailto:benadectajacob@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i></a>
+                <a href="tel:+9110669762" aria-label="Call Benadecta"><i class="fas fa-phone"></i></a>
+                <a href="mailto:benadectajacob@gmail.com" aria-label="Email Benadecta"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </section>
@@ -119,12 +120,28 @@
     <!-- Education Section -->
     <section id="education" class="section reveal">
         <h2>Education</h2>
-        <ul>
-            <li><strong>MCA – Master of Computer Applications</strong><br>St. Joseph Engineering College, Vamanjoor<br>CGPA: 9.3 (2024)</li>
-            <li><strong>B.Sc. (Physics, Computer Science, Mathematics)</strong><br>St. Aloysius College, Mangalore<br>CGPA: 8.7 (2022)</li>
-            <li><strong>PUC – Pre-University Course (Science)</strong><br>St. Agnes PUC College, Bendoor<br>79.83% (2019)</li>
-            <li><strong>SSLC – Secondary School Leaving Certificate</strong><br>St. Agnes High School<br>91.68% (2017)</li>
-        </ul>
+        <div class="education-grid">
+            <div class="edu-item">
+                <strong>MCA – Master of Computer Applications</strong><br>
+                St. Joseph Engineering College, Vamanjoor<br>
+                CGPA: 9.3 (2024)
+            </div>
+            <div class="edu-item">
+                <strong>B.Sc. (Physics, Computer Science, Mathematics)</strong><br>
+                St. Aloysius College, Mangalore<br>
+                CGPA: 8.7 (2022)
+            </div>
+            <div class="edu-item">
+                <strong>PUC – Pre-University Course (Science)</strong><br>
+                St. Agnes PUC College, Bendoor<br>
+                79.83% (2019)
+            </div>
+            <div class="edu-item">
+                <strong>SSLC – Secondary School Leaving Certificate</strong><br>
+                St. Agnes High School<br>
+                91.68% (2017)
+            </div>
+        </div>
     </section>
 
     <!-- Certifications Section -->
@@ -132,7 +149,7 @@
         <h2>Certifications</h2>
         <ul class="cert-list">
             <li>SQL and Data Analytics – Coursera</li>
-            <li>Certificate: Managing Big Data with MySQL – Coursera</li> 
+            <li>Certificate: Managing Big Data with MySQL – Coursera</li>
             <li>Python & Machine Learning Bootcamp – ShapeAI (2022)</li>
         </ul>
     </section>
@@ -142,14 +159,14 @@
         <h2>Hire Me</h2>
         <p>Looking forward to collaborating on impactful IT projects. Reach me via:</p>
         <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/yourprofile" class="icon-btn"><i class="fab fa-linkedin"></i></a>
-            <a href="tel:+9110669762" class="icon-btn"><i class="fas fa-phone"></i></a>
-            <a href="mailto:benadectajacob@gmail.com" class="icon-btn"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" class="icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="tel:+9110669762" class="icon-btn" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="mailto:benadectajacob@gmail.com" class="icon-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>

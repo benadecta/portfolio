@@ -1,6 +1,4 @@
-// =========================
-// Typewriter effect in Hero
-// =========================
+// Typewriter Effect for Hero Section
 const typewriterText = [
   "Business Analyst",
   "Scrum Master",
@@ -23,6 +21,7 @@ function type() {
       setTimeout(erase, delayBetween);
   }
 }
+
 function erase() {
   if (charIndex > 0) {
       typewriterElement.textContent = typewriterText[typeIndex].substring(0, charIndex - 1);
@@ -33,11 +32,10 @@ function erase() {
       setTimeout(type, typingSpeed);
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => setTimeout(type, 500));
 
-// =========================
-// Scroll reveal animations
-// =========================
+// Scroll Reveal Animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -46,30 +44,24 @@ const observer = new IntersectionObserver((entries) => {
       }
   });
 }, { threshold: 0.2 });
+
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-// =========================
 // Scroll to Top Button
-// =========================
 const scrollBtn = document.getElementById("scrollTopBtn");
-const navUpArrow = document.querySelector('.nav-up-arrow');
-window.onscroll = () => {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
       scrollBtn.style.display = "block";
   } else {
       scrollBtn.style.display = "none";
   }
-};
+});
+
 scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-navUpArrow.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
 
-// =========================
-// Skill badge click pulse
-// =========================
+// Skill Badge Click Pulse
 document.querySelectorAll(".skill").forEach(skill => {
   skill.addEventListener("click", () => {
       skill.classList.add("clicked");
@@ -77,12 +69,12 @@ document.querySelectorAll(".skill").forEach(skill => {
   });
 });
 
-// =========================
 // Navbar Toggle for Responsiveness
-// =========================
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuToggle.classList.toggle("active");
+  document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
 });
