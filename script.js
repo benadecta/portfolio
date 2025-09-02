@@ -70,6 +70,7 @@ document.querySelectorAll(".skill").forEach(skill => {
 });
 
 // Navbar Toggle for Responsiveness
+// Responsive
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
