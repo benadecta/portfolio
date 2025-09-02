@@ -21,6 +21,12 @@ body {
     flex-direction: column;
 }
 
+/* Navbar Placeholder */
+.navbar-placeholder {
+    height: 60px; /* Matches the navbar height, adjust if navbar height changes */
+    width: 100%;
+}
+
 /* Background Waves */
 .bg-waves {
     position: fixed;
@@ -66,6 +72,7 @@ body {
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
+    height: 60px; /* Explicit height to match placeholder */
 }
 
 .logo {
@@ -130,7 +137,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 6rem 2rem 2rem; /* Increased top padding to avoid overlap */
+    padding: 6rem 2rem 2rem; /* Increased top padding to avoid overlap, adjust if needed */
     min-height: 100vh;
 }
 
@@ -187,7 +194,8 @@ body {
 }
 
 .btn.secondary {
-    background: var(--accent-rose);
+    background: #bdb2ff; /* Lilac */
+    color: #2b2b2b;
 }
 
 .social-icons {
@@ -222,10 +230,11 @@ body {
 
 /* Skills */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens for responsiveness */
     justify-content: center;
+    gap: 1rem;
     padding: 0 1rem;
 }
 
@@ -236,6 +245,7 @@ body {
     text-align: center;
     cursor: pointer;
     transition: all 0.3s var(--ease);
+    white-space: nowrap; /* Prevents text wrapping within skill items */
 }
 
 .skill:hover {
@@ -406,6 +416,14 @@ body {
         padding: 1rem;
     }
 
+    .navbar-placeholder {
+        height: 50px; /* Adjusted for mobile navbar height */
+    }
+
+    .navbar {
+        height: 50px; /* Adjusted for mobile navbar height */
+    }
+
     .menu-toggle {
         display: flex;
     }
@@ -413,7 +431,7 @@ body {
     .nav-links {
         display: none;
         position: fixed;
-        top: 60px;
+        top: 50px; /* Adjusted to match mobile navbar height */
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.95);
@@ -423,7 +441,7 @@ body {
         margin: 0;
         z-index: 1000;
         height: auto;
-        max-height: calc(100vh - 60px);
+        max-height: calc(100vh - 50px);
         overflow-y: auto;
     }
 
@@ -475,12 +493,15 @@ body {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        flex-wrap: wrap; /* Ensures wrapping on mobile */
+        justify-content: flex-start;
+        padding: 0;
     }
 
     .skill {
         padding: 0.3rem 0.8rem;
         font-size: 0.9rem;
+        flex: 0 0 auto; /* Prevents stretching */
     }
 
     .education-grid {
@@ -524,6 +545,14 @@ body {
 }
 
 @media (max-width: 480px) {
+    .navbar-placeholder {
+        height: 50px; /* Adjusted for smaller screens */
+    }
+
+    .navbar {
+        height: 50px; /* Adjusted for smaller screens */
+    }
+
     .hero .profile-pic {
         width: 120px;
     }
@@ -552,4 +581,4 @@ body {
         height: 35px;
         font-size: 1.1rem;
     }
-} 
+}

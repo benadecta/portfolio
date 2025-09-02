@@ -3,7 +3,7 @@ const typewriterText = [
   "Business Analyst",
   "Scrum Master",
   "Project Coordinator",
-  "Associate Project Manager"
+  "Product Analyst"
 ];
 let typeIndex = 0;
 let charIndex = 0;
@@ -70,7 +70,6 @@ document.querySelectorAll(".skill").forEach(skill => {
 });
 
 // Navbar Toggle for Responsiveness
-// Responsive
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
@@ -78,4 +77,14 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   menuToggle.classList.toggle("active");
   document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+});
+
+// Close menu when a nav link is clicked
+navLinks.addEventListener("click", (event) => {
+  const link = event.target.closest("a");
+  if (link && link.getAttribute("href").startsWith("#")) {
+      navLinks.classList.remove("active");
+      menuToggle.classList.remove("active");
+      document.body.style.overflow = "auto";
+  }
 });
